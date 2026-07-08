@@ -1,0 +1,240 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #090915;
+    color: white;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #11111f;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: #8b5cf6;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav button {
+    background: #8b5cf6;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 8%;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    color: #c7c7c7;
+    margin-bottom: 30px;
+}
+
+.btn {
+    text-decoration: none;
+    background: #8b5cf6;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 80%;
+}
+
+
+.features {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background: #151526;
+    padding: 30px;
+    width: 300px;
+    border-radius: 20px;
+    transition: 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+
+.team {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.team-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.member {
+    background: #151526;
+    padding: 20px;
+    border-radius: 20px;
+    width: 250px;
+}
+
+.member img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.contact {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+form {
+    max-width: 600px;
+    margin: auto;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 15px 0;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background: #151526;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+input:focus, 
+textarea:focus {
+    outline: none;
+    border-color: #8b5cf6;
+    background: #1b1b32;
+}
+
+form button {
+    background: #8b5cf6;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #11111f;
+    color: #bfbfbf;
+}
+
+@media(max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 40px;
+    }
+}
+
+
+
+nav button, .btn, form button {
+    transition: all 0.3s ease-in-out;
+}
+
+nav button:hover, .btn:hover, form button:hover {
+    background: #a78bfa; 
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(139, 92, 246, 0.3);
+}
+
+/* Dynamic container box for error/success text styles */
+.feedback-box {
+    max-width: 600px;
+    margin: 0 auto 15px auto;
+    padding: 15px;
+    border-radius: 10px;
+    display: none; 
+    font-weight: 600;
+    text-align: center;
+}
+
+.feedback-success {
+    background: rgba(16, 185, 129, 0.15);
+    border: 1px solid #10b981;
+    color: #34d399;
+}
+
+.feedback-error {
+    background: rgba(239, 68, 68, 0.15);
+    border: 1px solid #ef4444;
+    color: #f87171;
+}

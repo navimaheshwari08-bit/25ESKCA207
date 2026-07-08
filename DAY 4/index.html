@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AetherAI Academy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+    <div class="logo">AetherAI</div>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <button id="joinBtn">Join Us</button>
+</nav>
+
+<section class="hero">
+    <div class="hero-text">
+        <h1>Where Code Meets Creativity</h1>
+        <p>Learn Artificial Intelligence, Web Development and Technology with a touch of imagination.</p>
+        <a href="#contact-section" class="btn">Start Learning</a>
+    </div>
+    <div class="hero-image">
+        <img src="images/hero.png" alt="AetherAI Creativity">
+    </div>
+</section>
+
+<section class="features">
+    <h2>Why Choose Us?</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>🤖 AI Learning</h3>
+            <p>Hands-on projects and real-world skills.</p>
+        </div>
+        <div class="card">
+            <h3>💻 Coding Bootcamps</h3>
+            <p>Learn HTML, CSS, JavaScript and Python.</p>
+        </div>
+        <div class="card">
+            <h3>🎨 Creative Thinking</h3>
+            <p>Technology blended with storytelling and innovation.</p>
+        </div>
+    </div>
+</section>
+
+<section class="team">
+    <h2>Meet Our Trainers</h2>
+    <div class="team-container">
+        <!-- Team members omitted for reading clarity, keep your original base64 images here! -->
+    </div>
+</section>
+
+<!-- Added id attribute to link the "Start Learning" button smoothly -->
+<section id="contact-section" class="contact">
+    <h2>Contact Us</h2>
+    
+    <!-- This container will display our validation warnings or personalized greetings -->
+    <div id="form-feedback" class="feedback-box"></div>
+
+    <form id="academyForm">
+        <input type="text" id="userName" placeholder="Your Name" required>
+        <input type="email" id="userEmail" placeholder="Your Email" required>
+        <textarea id="userMessage" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    <p>"In every line of code, there is a little poetry waiting to be discovered."</p>
+</footer>
+
+<!-- Linking our new script file -->
+<script src="script.js"></script>
+</body>
+</html>
