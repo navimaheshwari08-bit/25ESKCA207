@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Student Directory Challenge</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            /* Keeps the body hidden on first load so jQuery can fade it in */
+            display: none; 
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 20px;
+            width: 300px;
+            border-top: 5px solid #3498db;
+        }
+        h2 { margin-top: 0; color: #2c3e50; }
+        .details {
+            display: none;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+            color: #7f8c8d;
+        }
+        .btn-details {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 15px;
+            /* Smooth transition for the background color shift */
+            transition: background-color 0.3s ease; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h2>Alex Rivera</h2>
+        <p>Role: Web Dev Student</p>
+        
+        <div class="details">
+            <p><strong>Email:</strong> alex@school.edu</p>
+            <p><strong>Current Project:</strong> Portfolio Site</p>
+            <p><strong>Attendance:</strong> 98%</p>
+        </div>
+        
+        <button class="btn-details">Show Details</button>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            
+            // BONUS: Fades the entire page in over 1 second when loaded
+            $("body").fadeIn(1000);
+
+            // BASE MISSION: Click event handler for the details button
+            $(".btn-details").click(function() {
+                
+                // Targets the specific details box belonging to this card
+                var $detailsPanel = $(this).closest(".card").find(".details");
+                
+                // Animates opening/closing the details panel
+                $detailsPanel.slideToggle();
+
+                // LEVEL UP CHALLENGE: Change text and background color on toggle
+                if ($detailsPanel.is(":hidden")) {
+                    // If it was hidden when clicked, it means it is expanding now
+                    $(this).text("Hide Details");
+                    $(this).css("background-color", "#e74c3c"); // Soft red/coral color
+                } else {
+                    // If it was visible when clicked, it means it is collapsing now
+                    $(this).text("Show Details");
+                    $(this).css("background-color", "#3498db"); // Original blue color
+                }
+
+            });
+            
+        });
+    </script>
+</body>
+</html>

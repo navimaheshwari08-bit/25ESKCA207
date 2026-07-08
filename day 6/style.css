@@ -1,0 +1,118 @@
+/* --- Global & Layout Styles --- */
+body {
+    background-color: #f0f2f5; /* Subtle grayish-blue background */
+    font-family: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #333;
+}
+
+.header-title {
+    font-weight: 800; /* Extra bold for a modern look */
+    color: #1a1d21;
+    letter-spacing: -1px;
+}
+
+/* --- Attractive User Card Styles --- */
+.user-card {
+    border: none;
+    border-radius: 16px; /* Soft, modern corners */
+    background: #ffffff;
+    transition: all 0.3s ease-in-out;
+    height: 100%;
+    overflow: hidden; /* Keeps the top image wrapper clipped */
+}
+
+/* Subtle, soft shadow that elevates on hover */
+.user-card.shadow-sm {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* The Hover Effect (Requirement: Bonus UI Improvement) */
+.user-card:hover {
+    transform: translateY(-8px); /* Lift the card */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important; /* Deepen the shadow */
+}
+
+/* --- Card Image Styling --- */
+.card-img-wrapper {
+    background-color: #e9ecef; /* Placeholder while image loads */
+    height: 120px; /* Fixed height container for the top section */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid #eee;
+}
+
+/* The circular avatar wrapper */
+.avatar-circle {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #ffffff; /* White border to make avatar "pop" */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: absolute;
+    bottom: -40px; /* Overlaps the bottom of the gray wrapper */
+    z-index: 2;
+}
+
+/* Requirement: Real People Images styling */
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image fills circle without distortion */
+}
+
+/* --- Card Body Styling --- */
+.user-card .card-body {
+    padding-top: 50px; /* Space for the overlapping avatar */
+    text-align: center;
+}
+
+.user-name {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #1a1d21;
+    margin-bottom: 0.25rem;
+}
+
+.user-title {
+    font-size: 0.9rem;
+    color: #0d6efd; /* Bootstrap primary blue */
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Styles for contact details (email/location) */
+.user-info-text {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+/* --- Filter Input Customization --- */
+.search-input {
+    border-radius: 0 12px 12px 0; /* Match Bootstrap input-group rounded corners */
+    padding: 12px;
+    font-size: 1.1rem;
+}
+
+.search-input:focus {
+    box-shadow: none; /* Let the input-group shadow handle it */
+    border-color: #ced4da;
+}
+
+/* --- Utility States --- */
+.spinner-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+}
