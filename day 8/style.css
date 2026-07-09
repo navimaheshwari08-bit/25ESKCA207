@@ -1,0 +1,45 @@
+/* Custom Portfolio Upgrades and Gradients */
+
+/* Rich linear gradients for custom cards */
+.card-header {
+    background: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%);
+}
+
+.confirmation-header {
+    background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+}
+
+/* Light badge variant for the confirmation check banner */
+.bg-success-light {
+    background-color: rgba(34, 197, 94, 0.15) !important;
+}
+
+/* Photo Upload Layout Preview Frame */
+.avatar-wrapper {
+    width: 140px;
+    height: 140px;
+    border: 3px solid #f3f4f6;
+}
+
+.avatar-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Extra typography flair */
+.tracking-wider {
+    letter-spacing: 0.05em;
+    font-size: 0.75rem;
+}
+
+/* Small interactive bounce effect for check icon */
+.bounce-icon {
+    color: #22c55e !important;
+    animation: bounce 1s ease infinite alternate;
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-8px); }
+}
